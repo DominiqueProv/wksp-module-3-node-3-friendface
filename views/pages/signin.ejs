@@ -1,0 +1,19 @@
+<%- include( '../partials/header') %>
+
+
+<div class="submit-form">
+    <h1 class=""> <%- title %></h1>
+    <p class="text-courrant">Please enter your credential to authenticate yourself. In case you don't remeber your name, pleaze contact the closest hospital."</p>
+    <form method='get' action='/getname' class='signin-form'>
+       
+        <label class="form-name" for='firstName'>First name</label>
+        <input type='text' name='firstName' />
+        <label class="form-name" for='email'>Email</label>
+        <input type='text' name='email' />
+        <button type='submit'>Submit</button>
+    </form>
+    </div>
+
+
+
+<%- include( '../partials/footer') %>

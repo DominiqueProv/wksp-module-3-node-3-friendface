@@ -1,0 +1,15 @@
+<h2>My Petri dish friends </h2>
+
+<div class="container">
+        <% currentUser.friends.forEach(friend =>{ %>
+        <% users.forEach(item => { %>
+        <%  if (friend === item.id){ %>
+        <div class="friends">
+        <a href="/user/<%= item.id %> "><img class="images-friends" src="<%=item.avatarUrl%>" alt="firends" /></a>
+        <p class="friends-name"><%= item.name %> </p>
+        </div>
+                <% } %>
+            <% });  %>
+        <% }); %>
+    </div>
+</div>
