@@ -138,3 +138,24 @@ h2 {
   text-align: center;
   font-family: 'Roboto';
   width: 100%; }
+
+.add-friend-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  bottom: 85px;
+  right: -20px;
+  cursor: pointer;
+  color: red;
+  font-size: 20px;
+  transition: all .5s;
+  border: none; }
+
+.add-friend-btn:hover {
+  background-color: red;
+  color: white; }
+
+.input-value {
+  display: none; }

@@ -2,32 +2,23 @@
 
 <div class="friends-container">
 
-    <% let newcurrentUser = currentUser; %>
-    <% /*newcurrentUser.friends.push(currentUser.id);*/ %>
-    <% let currentUserIds = newcurrentUser.friends; %>
-    <% let idFriend = []; %>
-    <% for (items of users) { %>
-    <% idFriend.push(items.id) %>
-    <% }; %>
-    <% let otherFriends = idFriend.filter(e => !currentUserIds.includes(e)) %>
-    <% otherFriends = otherFriends.filter(e => !newcurrentUser.id.includes(e)) %>
-    <% otherFriends.forEach(ids =>{ %>
-    <% users.forEach(item => { %>
-    <%  if (ids === item.id){ %>
+    
+    <% otherFriends.forEach(item =>{ %>
         <a href="/user/<%= item.id %>">
         <div class="friends-new">
-    <img class="images-newfriends" src="<%=item.avatarUrl%>" alt="firends" />
+    <img class="images-newfriends" src="<%=item.avatarUrl%>" alt="friends" />
         <div class="overlay">
-            <div class="text">Add<br> <%= item.name %><br>♥️</div>
+            <div class="text"><%= item.name %></div>
         </div>
         </a>
+        <form method="POST" action="/addFriend">
+        <input type="text" class="input-value" name="newFriend" placeholder="name" value=<%= item.id %> />
+        <input class="add-friend-btn" type="submit" name="buttonVALUE" value="♥" >
+        
+        
+        </form>
+        
 </div>
-    <% } %>
-    <% });  %>
     <% }); %>
 
 </div>
-
-<%function addFriend(){ %>
-   <% currentUser.friend.push(item.id); %>
-   <%}; %>
